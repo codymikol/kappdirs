@@ -3,7 +3,7 @@ AppDirs
 
 ## Overview
 
-__AppDirs__ is a small java library which provides a path to the platform dependent special folder/directory. 
+__KappDirs__ is a small kotlin library which provides a path to the platform dependent special folder/directory. 
 
 For example, here are the common paths of the folder/directory that is used to store application specific user data on each platform.
 
@@ -14,8 +14,8 @@ On Unix/Linux : ```/home/<account>/.local/share/<AppName>```
 
 With __AppDirs__, you can get the path depending on the runtime platform with the following code.
 
-``` java
-AppDirs appDirs = AppDirsFactory.getInstance();
+``` kotlin
+val appDirs = AppDirsFactory.getInstance();
 appDirs.getUserDataDir("<AppName>", null, "<AppAuthor>");
 ```
 __AppDirs__ is loosely based on [a python module](https://github.com/ActiveState/appdirs) with the same name.  

@@ -11,25 +11,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package net.harawata.appdirs
 
-package net.harawata.appdirs;
+class AppDirsException : RuntimeException {
+    constructor() : super() {}
+    constructor(message: String?, cause: Throwable?) : super(message, cause) {}
+    constructor(message: String?) : super(message) {}
+    constructor(cause: Throwable?) : super(cause) {}
 
-public class AppDirsException extends RuntimeException {
-  private static final long serialVersionUID = -2414166199405082671L;
-
-  public AppDirsException() {
-    super();
-  }
-
-  public AppDirsException(String message, Throwable cause) {
-    super(message, cause);
-  }
-
-  public AppDirsException(String message) {
-    super(message);
-  }
-
-  public AppDirsException(Throwable cause) {
-    super(cause);
-  }
+    companion object {
+        private const val serialVersionUID = -2414166199405082671L
+    }
 }

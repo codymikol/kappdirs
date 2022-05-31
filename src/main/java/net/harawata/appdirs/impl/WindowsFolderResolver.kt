@@ -11,11 +11,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package net.harawata.appdirs.impl
 
-package net.harawata.appdirs.impl;
+import net.harawata.appdirs.impl.WindowsAppDirs.FolderId
 
-import net.harawata.appdirs.impl.WindowsAppDirs.FolderId;
-
-public interface WindowsFolderResolver {
-  String resolveFolder(FolderId folderId);
+interface WindowsFolderResolver {
+    open fun resolveFolder(folderId: FolderId?): String?
 }
